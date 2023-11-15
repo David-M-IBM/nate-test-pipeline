@@ -4,6 +4,8 @@
   kubernetes.core.k8s:
     template: ./installation-cr.j2
     state: present
+  register: result
+  until: result is not failed
   retries: 20
   delay: 30
 
