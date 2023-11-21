@@ -419,6 +419,7 @@ spec:
           value: $(params.verbose)
     - name: ansible-runner
       timeout: 6h0m0s
+      retries: 3
       runAfter:
         - git-clone
       taskRef:
